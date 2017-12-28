@@ -1,0 +1,49 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+apply plugin: 'maven-publish'
+apply plugin: 'com.github.dcendents.android-maven'
+group='com.github.dive-tv'
+
+android {
+    compileSdkVersion 25
+    lintOptions {
+        abortOnError false
+    }
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+}
+configurations {
+    all*.exclude group: 'com.squareup', module: 'okhttp'
+    all*.exclude group: 'org.joda', module: 'time'
+    all*.exclude group: 'com.android.okhttp', module: 'okio'
+    all*.exclude group: 'com.squareup', module: 'okio'
+}
+dependencies {
+    compile 'com.android.support:appcompat-v7:25.4.0'
+    compile ('io.socket:socket.io-client:0.8.2') {
+        exclude group: 'org.json', module: 'json'
+        exclude group: 'com.squareup', module: 'okhttp'
+    }
+    compileOnly 'com.github.dive-tv:sdk-client-java:1.0.3'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
+
+repositories {
+    mavenCentral()
+    jcenter()
+    maven { url "https://jitpack.io"}
+    maven { url 'https://maven.fabric.io/public' }
+    maven { url 'http://maven.apptimize.com/artifactory/repo' }
+}
+
+def coreAarFile = file("build/${archivesBaseName}-${project.version}.aar")
+
+artifacts {
+    archives coreAarFile
+}
