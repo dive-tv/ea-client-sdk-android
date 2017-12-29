@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/ea-client-sdk-android.iml" filepath="$PROJECT_DIR$/ea-client-sdk-android.iml" />
       <module fileurl="file://$PROJECT_DIR$/sdk-client/sdk-client.iml" filepath="$PROJECT_DIR$/sdk-client/sdk-client.iml" />
+      <module fileurl="file://D:\dive-sdk\libraries\ea-client-sdk-android\sdk-client\sdk-client.iml" filepath="D:\dive-sdk\libraries\ea-client-sdk-android\sdk-client\sdk-client.iml" />
     </modules>
   </component>
 </project>
