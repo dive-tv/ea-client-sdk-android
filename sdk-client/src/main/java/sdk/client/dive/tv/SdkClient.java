@@ -128,10 +128,9 @@ public class SdkClient {
     /**
      * Client message, signals a pause in current VOD playback.
      *
-     * @param timestamp New playback timestamp, in seconds
      */
-    public void vodStreamPauseMessage(int timestamp) {
-        StreamMessage message = new StreamMessage(timestamp, StreamMessage.Type.vod_pause);
+    public void vodStreamPauseMessage() {
+        StreamMessage message = new StreamMessage(StreamMessage.Type.vod_pause);
         this.streamAPI.sendMessage(message);
     }
 
