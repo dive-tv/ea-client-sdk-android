@@ -28,7 +28,7 @@ dependencies {
         exclude group: 'org.json', module: 'json'
         exclude group: 'com.squareup', module: 'okhttp'
     }
-    compileOnly 'com.github.dive-tv:sdk-client-java:1.0.3'
+    compileOnly 'com.github.dive-tv:sdk-client-java:1.0.6'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
