@@ -130,7 +130,7 @@ public class SdkClient {
      *
      */
     public void vodStreamPauseMessage() {
-        StreamMessage message = new StreamMessage(StreamMessage.Type.vod_pause);
+        StreamMessage message = new StreamMessage(0, StreamMessage.Type.vod_pause);
         this.streamAPI.sendMessage(message);
     }
 
