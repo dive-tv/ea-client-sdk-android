@@ -81,13 +81,12 @@ public class SdkClient {
      * Checks whether a list of client movie identifiers (Video On Demand) are available to be synchronized using the Dive API
      *
      * @param clientMovieIds List of client movie IDs
-     * @param acceptLanguage Client locale, as language-country
      * @param callback Instance of client callback. "onSuccess" method expects to receive a list of movie status
      */
-    public void getReadyMovies(List<String> clientMovieIds, String acceptLanguage, ClientCallback<List<MovieStatus>> callback) {
+    public void getReadyMovies(List<String> clientMovieIds, ClientCallback<List<MovieStatus>> callback) {
         try {
             ApiCallbackImpl<List<MovieStatus>> apiCallback = new ApiCallbackImpl(Constants.GET_READY_MOVIES_SERVICE_NAME, callback);
-            this.restAPI.getReadyMoviesAsync(sharedPreferences.getAccessTokenWithPrefix(), clientMovieIds, acceptLanguage, apiCallback);
+            this.restAPI.getReadyMoviesAsync(sharedPreferences.getAccessTokenWithPrefix(), clientMovieIds, null, apiCallback);
         } catch (ApiException e) {
             e.printStackTrace();
             callback.onFailure(RestAPIError.INTERNAL_ERROR);
