@@ -151,7 +151,7 @@ public class SdkClient {
     public void getReadyChannels(List<String> channelId, final ClientCallback<List<ChannelStatus>> callback){
         try {
             ApiCallbackImpl<List<ChannelStatus>> apiCallback = new ApiCallbackImpl(Constants.GET_READY_CHANNELS_SERVICE_NAME,callback);
-            this.restAPI.getReadyChannelsAsync(sharedPreferences.getAccessToken(), channelId, null, apiCallback);
+            this.restAPI.getReadyChannelsAsync(sharedPreferences.getAccessTokenWithPrefix(), channelId, null, apiCallback);
         } catch (ApiException e) {
             e.printStackTrace();
             callback.onFailure(RestAPIError.INTERNAL_ERROR);
