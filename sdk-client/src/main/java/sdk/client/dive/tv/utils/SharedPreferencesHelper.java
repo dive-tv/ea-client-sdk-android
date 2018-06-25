@@ -150,7 +150,7 @@ public class SharedPreferencesHelper {
      */
     public boolean getCategoriesVisible() {
         SharedPreferences sharedPref = appContext.getSharedPreferences(Constants.SHARED_PREFERENCES, Context.MODE_PRIVATE);
-        return sharedPref.getBoolean(Constants.CATEGORIES_VALUE, true);
+        return sharedPref.getBoolean(Constants.CATEGORIES_VISIBLE_VALUE, true);
     }
 
     /**
