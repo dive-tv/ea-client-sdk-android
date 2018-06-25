@@ -21,6 +21,8 @@ public class Constants {
     public static final String REFRESH_TOKEN_EXPIRATION = "dive.tv.auth.refresh.token.expiration";
     public static final String API_KEY_VALUE = "dive.tv.auth.client.api.key";
     public static final String DEVICE_ID_VALUE = "dive.tv.auth.client.device.id";
+    public static final String CATEGORIES_VALUE = "dive.tv.auth.client.categories";
+    public static final String CATEGORIES_VISIBLE_VALUE = "dive.tv.auth.client.categories.visible";
     public static final long EXPIRATION_MARGIN = 10000; // 10 seconds
     public static final long MONTH_TO_MILLISECONDS = 2629746000L;
 
