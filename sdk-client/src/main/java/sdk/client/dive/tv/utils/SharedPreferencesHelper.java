@@ -172,7 +172,7 @@ public class SharedPreferencesHelper {
      */
     public boolean getCustomCategories() {
         SharedPreferences sharedPref = appContext.getSharedPreferences(Constants.SHARED_PREFERENCES, Context.MODE_PRIVATE);
-        return sharedPref.getBoolean(Constants.CUSTOM_CATEGORIES_VALUE, true);
+        return sharedPref.getBoolean(Constants.CUSTOM_CATEGORIES_VALUE, false);
     }
 
     /**
