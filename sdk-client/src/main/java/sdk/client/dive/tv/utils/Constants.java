@@ -23,6 +23,7 @@ public class Constants {
     public static final String DEVICE_ID_VALUE = "dive.tv.auth.client.device.id";
     public static final String CATEGORIES_VALUE = "dive.tv.auth.client.categories";
     public static final String CATEGORIES_VISIBLE_VALUE = "dive.tv.auth.client.categories.visible";
+    public static final String CUSTOM_CATEGORIES_VALUE = "dive.tv.auth.client.custom.categories";
     public static final long EXPIRATION_MARGIN = 10000; // 10 seconds
     public static final long MONTH_TO_MILLISECONDS = 2629746000L;
 

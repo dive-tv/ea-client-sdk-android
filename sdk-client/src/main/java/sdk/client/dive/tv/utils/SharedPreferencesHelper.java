@@ -164,4 +164,26 @@ public class SharedPreferencesHelper {
         editor.putBoolean(Constants.CATEGORIES_VISIBLE_VALUE, categories);
         editor.apply();
     }
+
+    /**
+     * Retrieves the categories value stored on shared preferences.
+     *
+     * @return the categories
+     */
+    public boolean getCustomCategories() {
+        SharedPreferences sharedPref = appContext.getSharedPreferences(Constants.SHARED_PREFERENCES, Context.MODE_PRIVATE);
+        return sharedPref.getBoolean(Constants.CUSTOM_CATEGORIES_VALUE, true);
+    }
+
+    /**
+     * Store device ID value on shared preferences.
+     *
+     * @param categories the categories
+     */
+    public void storeCustomCategories(boolean categories) {
+        SharedPreferences sharedPref = appContext.getSharedPreferences(Constants.SHARED_PREFERENCES, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putBoolean(Constants.CUSTOM_CATEGORIES_VALUE, categories);
+        editor.apply();
+    }
 }
