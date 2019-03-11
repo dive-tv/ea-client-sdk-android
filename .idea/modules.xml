@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/ea-client-sdk-android.iml" filepath="$PROJECT_DIR$/ea-client-sdk-android.iml" />
-      <module fileurl="file://$PROJECT_DIR$/sdk-client/sdk-client.iml" filepath="$PROJECT_DIR$/sdk-client/sdk-client.iml" />
-    </modules>
-  </component>
-</project>
